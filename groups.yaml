@@ -1,0 +1,10 @@
+watertemp:
+    name:  watertemp
+    entities:
+      - sensor.28051686b8acff
+upstairs_doors:
+   name: Upstairs Doors
+   entities:
+     - switch.protein_skimmer
+     - switch.powerhead_sicce
+     - switch.refill_resevoir
