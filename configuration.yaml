@@ -72,6 +72,42 @@ switch:
     optimistic: false
     qos: 0
     retain: true
+  - platform: mqtt
+    name: "relay5"
+    state_topic: "fishtank/relay5/state" 
+    command_topic: "fishtank/relay5/command" 
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: "relay6"
+    state_topic: "fishtank/relay6/state" 
+    command_topic: "fishtank/relay6/command" 
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: "relay7"
+    state_topic: "fishtank/relay7/state" 
+    command_topic: "fishtank/relay7/command" 
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
+  - platform: mqtt
+    name: "relay8"
+    state_topic: "fishtank/relay8/state" 
+    command_topic: "fishtank/relay8/command" 
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    qos: 0
+    retain: true
 #  - platform: rpi_gpio
 #    invert_logic: false
 #    ports:
@@ -122,3 +158,6 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
+shell_command:
+  restartmqttrelay: sudo systemctl restart  mqttrelay
+
